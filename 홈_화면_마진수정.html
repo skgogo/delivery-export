@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#feb700",
+                    "surface-container-high": "#ffd9dc",
+                    "surface-variant": "#ffd2d5",
+                    "error-container": "#f74b6d",
+                    "on-primary": "#ffefed",
+                    "on-tertiary-fixed-variant": "#5f4200",
+                    "tertiary-dim": "#694a00",
+                    "on-tertiary-container": "#533a00",
+                    "inverse-surface": "#240208",
+                    "on-primary-fixed-variant": "#610003",
+                    "on-error": "#ffefef",
+                    "outline": "#a1676d",
+                    "tertiary-fixed-dim": "#ecaa00",
+                    "on-secondary-container": "#005d4c",
+                    "on-primary-fixed": "#000000",
+                    "secondary-dim": "#005b4a",
+                    "outline-variant": "#de9ca2",
+                    "surface": "#ffffff",
+                    "surface-container-highest": "#f8f1f2",
+                    "on-surface": "#4d2127",
+                    "error-dim": "#a70138",
+                    "error": "#b41340",
+                    "on-secondary-fixed-variant": "#006855",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#fdf8f9",
+                    "on-surface-variant": "#824c52",
+                    "on-secondary-fixed": "#00483a",
+                    "primary-dim": "#9e1714",
+                    "on-primary-container": "#4f0002",
+                    "surface-bright": "#ffffff",
+                    "primary-fixed": "#ff7767",
+                    "secondary-fixed": "#65fbd6",
+                    "surface-tint": "#af251e",
+                    "surface-dim": "#f5f5f5",
+                    "tertiary-container": "#feb700",
+                    "primary-container": "#ff7767",
+                    "secondary": "#006855",
+                    "on-secondary": "#c4ffeb",
+                    "background": "#ffffff",
+                    "on-tertiary-fixed": "#392700",
+                    "on-tertiary": "#fff1de",
+                    "secondary-container": "#65fbd6",
+                    "primary": "#af251e",
+                    "secondary-fixed-dim": "#54ecc8",
+                    "on-background": "#4d2127",
+                    "inverse-primary": "#fd5d4e",
+                    "on-error-container": "#510017",
+                    "primary-fixed-dim": "#fd5d4e",
+                    "surface-container-low": "#fafafa",
+                    "tertiary": "#785500",
+                    "inverse-on-surface": "#cc8c92"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+        body {
+          min-height: 100dvh;
+        }
+    </style>
+</head>
+<body class="bg-white text-on-surface flex flex-col min-h-screen pb-32">
+<!-- TopAppBar Shell -->
+<header class="sticky top-0 bg-white/80 dark:bg-stone-950/80 backdrop-blur-xl z-50">
+<div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center w-full">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-full hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[#af251e] dark:text-[#ff7767]">location_on</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest opacity-60 font-bold">배송지</span>
+<span class="font-headline font-bold text-[#4d2127] dark:text-[#ffeced] text-sm leading-tight">Manhattan, NY</span>
+</div>
+</div>
+<h1 class="font-headline tracking-tight leading-tight text-xl font-bold text-[#4d2127] dark:text-[#ffeced] absolute left-1/2 -translate-x-1/2 hidden md:block">The Culinary Editorial</h1>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[#4d2127]">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="close-up portrait of a stylish young woman" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGPyuHjMjDc_ZxMvfY-HTNrkiBMDnGO7F7Tzq6_D4ADFh-hQ-6V1QITVwSkXmGD2FaQtSwAq-HbpJhW33Ch0nrOvcOpqBdBgcgc3tDAK6bmkR54bsoJyABbWYKf97e22YT2IYvDniMfs_JHBQn8Pnn5xa1xrXPU2Cq5P-iObJQVRCl_vsiKdSUQXKs9tGmu6DnAK3qXjmwZVpuPj4ujZYn8X59Tvtqwv_1_a5XGDWly2Vf5pgTq9zTVi5kFGUR7YdDQ8bf19vVI8bW"/>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow max-w-7xl mx-auto px-5 mt-4 space-y-10 w-full box-border">
+<!-- Search Section -->
+<section class="relative">
+<div class="flex items-center bg-white px-6 py-4 rounded-xl shadow-[0_10px_30px_rgba(77,33,39,0.06)] border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary-fixed-dim mr-4">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-on-surface font-medium placeholder:text-on-surface-variant/50" placeholder="좋아하는 메뉴를 검색해보세요..." type="text"/>
+<span class="material-symbols-outlined text-on-surface-variant/40 ml-4">tune</span>
+</div>
+</section>
+<!-- Category Horizontal Scroll -->
+<section class="-mx-5">
+<div class="flex overflow-x-auto hide-scrollbar px-5 gap-6 py-2">
+<!-- Pizza -->
+<button class="flex flex-col items-center gap-3 shrink-0 group">
+<div class="w-16 h-20 bg-surface-container-low rounded-full flex items-center justify-center group-hover:bg-gradient-to-br from-primary to-primary-container transition-all group-hover:scale-105 duration-300">
+<img alt="pizza" class="w-10 h-10 object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB25_FK9WH0Gsk36Ka3rFspRX5SntgGXJoxi6sq0RilqPrNSVyZuTpkysKfTUJdSvXTDhm5FjsEINdChowNsmTQbYgt0w-KVMeSgEmu0xZ7z9CptyL0IpDdCpCOuAp5lx38qj7k-vBEWLVwLo-YW3jlGHvB5ZW7jXwHcPTdPF7lVfxEr60swSzVHc2TtI0juhTSBP11JZe3I2W19-ZFlkRBRftpHcL3vF_6NmfORzP-BNKGQoIqto6Mr0f9fS-1QMs70EneF1DWoi-U"/>
+</div>
+<span class="font-headline text-xs font-bold tracking-wide">Pizza</span>
+</button>
+<!-- Chicken -->
+<button class="flex flex-col items-center gap-3 shrink-0 group">
+<div class="w-16 h-20 bg-surface-container rounded-full flex items-center justify-center group-hover:bg-gradient-to-br from-primary to-primary-container transition-all group-hover:scale-105 duration-300">
+<img alt="chicken" class="w-10 h-10 object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIwc2dYRQjsHur7ArXnGuznWLhJU9ZZC9ZO62KmjEsbAqdt8KFHzEy0tSn3krh8uzYvqjTUlZQVRqPIuHqWasR39tiD9RM2D2Fb0uFgeni4-QRp0fPg3ILvvmwwiXV_1Si8-wobvLx8GdF78fPWzOOg1bS-0EV60Knl_nEJ6BBstbgf0A9duEOuoALFuTr13SzwixacjZwH1s8yEyyR4WUEy4hY3oXK9DeiahvzOFBGNuWbso5syULFKrGXQWTBumpKDF8Ggz1Re96"/>
+</div>
+<span class="font-headline text-xs font-bold tracking-wide text-primary">Chicken</span>
+</button>
+<!-- Korean -->
+<button class="flex flex-col items-center gap-3 shrink-0 group">
+<div class="w-16 h-20 bg-surface-container-low rounded-full flex items-center justify-center group-hover:bg-gradient-to-br from-primary to-primary-container transition-all group-hover:scale-105 duration-300">
+<img alt="korean" class="w-10 h-10 object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn_UWJApKQg_fR7fQnFymruBTk-A1DltHU_ohdplh-cHUfuz87MUrN0EdQvUINtw8dU_jYzmuTOvgS03yI2QJlIfiaXFyVH0Ng-J8topi4TIN_A6samBFrWqiEtscucHmBwFbS4nk8RvbRvpWgYQq8aIIGyvxluqYMrNJvkpFN64w2o6qk9YuhoQg0xbxFKkOBAnMjinLnaa8G418YVf6CxnGvpJNI-uFUNoL21aDAbX14rA3whlFGKYPf5q80krY7RGn0XGt2BmNv"/>
+</div>
+<span class="font-headline text-xs font-bold tracking-wide">Korean</span>
+</button>
+<!-- Burger -->
+<button class="flex flex-col items-center gap-3 shrink-0 group">
+<div class="w-16 h-20 bg-surface-container-low rounded-full flex items-center justify-center group-hover:bg-gradient-to-br from-primary to-primary-container transition-all group-hover:scale-105 duration-300">
+<img alt="burger" class="w-10 h-10 object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl_SapPc2F4GUbVWuFao-iIKBROad4m9GGt55fIQqB_RY5m3p1uIC_eFr0SuTYLVh6YijLZdJCKZjpcLn4zPzs5fA-VQDZYtoSf1ZVftXsIGA_AuE601vt_er-7vyeDjlSe_qbn40pjPqHJJOTF4-kzDNkIg7cJTYbBxp6wG1wjiw1sAFvvpYCIGwOVKYXOD9TYHTeJNwKQ_9oY0jBqNmiACiwbI3gyAa12ukYeIUPTGyZrDRoQyRXtah0bdLl49RxY4jinEP5N_zq"/>
+</div>
+<span class="font-headline text-xs font-bold tracking-wide">Burger</span>
+</button>
+<!-- Sushi -->
+<button class="flex flex-col items-center gap-3 shrink-0 group">
+<div class="w-16 h-20 bg-surface-container-low rounded-full flex items-center justify-center group-hover:bg-gradient-to-br from-primary to-primary-container transition-all group-hover:scale-105 duration-300">
+<img alt="sushi" class="w-10 h-10 object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCkLefGVPL4y4xcKENQcpnWmkRcxFIJGyfBmkGZs0d5GTkvjSw7uR86cN5V4C9FE8UtIH3vT2--G_ae-ydJIl6Gn0UQX-4iDOVtFsqSQN51vKsQUy0c13RnbzftPCKFzGM-7cLEPBo6CXOx93VuxyViLDdnKJhGBq56LSB6rhZebumj7K8ezxcDPcuHem0YvHSDSyGZ7d1q9pg5xcU43PQ_6vp0MpokxkussoNJCb74BKWrIM7Sai7clMDQPvROPHz67BbmTC5D0Es"/>
+</div>
+<span class="font-headline text-xs font-bold tracking-wide">Sushi</span>
+</button>
+<!-- Dessert -->
+<button class="flex flex-col items-center gap-3 shrink-0 group">
+<div class="w-16 h-20 bg-surface-container-low rounded-full flex items-center justify-center group-hover:bg-gradient-to-br from-primary to-primary-container transition-all group-hover:scale-105 duration-300">
+<img alt="dessert" class="w-10 h-10 object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2h_YYe0UvmEPmdwxMjEFytE3VOjS0am8ey69stRzBC9IOUtsV7sUAcvPrhvFCcpKLd0dKExZGR5Gg0iPmZjWPNfHj9W2YUffFLHaJ8FOHcXl9GGQZ2i9zEbsofNjpMMVjPNdBd4fXwrkFbk5LH2Vg76pRou3iSdCjnY-0LxLqRYLiuLR_6AzE9eVFwlliiUTHirrMJsI5El5SXDZEBcFfPVqmrgmUNAzHzIOP3TbeRsCYQ5zImTpx2gxmhZWohFBMfdPVvQKvk0JV"/>
+</div>
+<span class="font-headline text-xs font-bold tracking-wide">Dessert</span>
+</button>
+</div>
+</section>
+<!-- Hero Promotional Banner -->
+<section>
+<div class="relative w-full aspect-[16/9] md:h-64 rounded-xl overflow-hidden group">
+<img alt="gourmet feast" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmiGlghOb9AMSq6uR4GPXRB-0NQlfS3jYe1WFAv09Tfk_Cbnfn4JcPL0bdC5ZP2HeJksz3qR72552QWBj8KanACHpo7cgq8pcSXQ7JiS6bDR0-nYu7hlDnhccgqtD7cgD5_u6wEC48FveJ2zsQmqIuRwmumgdE25zHA21WJpw95U44gDQem6MdtYG2JuoJ3J5lqFYcYbyx0ciuByg_TLhDDVbx_TdXkPNYfASWmPqeGQ_NsX0GGI6NoVeHqs5FGxe5TIvLHQrdTv26"/>
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface via-on-surface/40 to-transparent"></div>
+<div class="relative h-full flex flex-col justify-center px-10 max-w-lg">
+<span class="bg-tertiary-container text-on-tertiary-container font-headline font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full w-fit mb-4">한정 혜택</span>
+<h2 class="font-headline text-2xl md:text-4xl font-extrabold text-surface leading-tight mb-4">미식가들의 금요일<br/>스테이크 전 메뉴 40% 할인</h2>
+<p class="text-surface-container-high font-medium text-xs md:text-sm mb-6 opacity-90 line-clamp-2">최고급 비스트로의 엄선된 스테이크를 식탁에서 즐겨보세요.</p>
+<button class="bg-gradient-to-br from-primary to-primary-container text-white font-headline font-bold py-2 px-6 md:py-3 md:px-8 rounded-xl w-fit transition-transform active:scale-95">혜택 받기</button>
+</div>
+</div>
+</section>
+<!-- Trending Restaurants Section -->
+<section class="space-y-6">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="font-headline text-2xl font-extrabold tracking-tight">인기 맛집</h3>
+<p class="text-on-surface-variant text-sm mt-1">지역 인기 기반 큐레이션</p>
+</div>
+<button class="text-primary font-headline font-bold text-sm hover:underline">전체 보기</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Restaurant Card 1 -->
+<div class="bg-white rounded-lg overflow-hidden group border border-outline-variant/10 hover:shadow-xl transition-shadow duration-300">
+<div class="relative aspect-video">
+<img alt="restaurant interior" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyla43yw06MFGDBbvMJvqqO4mlo1FEwK4ro-X2xiUJ10vxpAmxxsyolgUo7VNiUFdYXXia8ihvSo-H6mUZggXe54ROU8A4kGkjoc-E9Q3C5MrOm8Z7wVLrj63hVbY0KzYohfXfSbtR2eDOM_I7esEBiuLylYJSno_Yf7lNWvFoOfwTscAP6vyg7gQVWhSCp8qoUfsKjtqpJvj9sAQReAV90P-HXbWmg1NYLyS0_Zyaz-amp_CvOuQHrUrWWvAqPpNInV8fnoKd1Zyx"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded-full flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary-fixed text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="font-headline font-bold text-xs">4.9</span>
+</div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="bg-secondary text-on-secondary text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">신선함</span>
+<span class="bg-on-surface/80 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full backdrop-blur">20-30분</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-headline text-xl font-bold">L'Artiste Bistro</h4>
+<span class="text-primary font-bold">$$$</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4 leading-relaxed line-clamp-2">맨해튼 중심부에서 즐기는 정통 프랑스 요리. 천천히 구운 오리 콩피와 수제 치즈 플래터를 만나보세요.</p>
+<div class="flex items-center gap-4 text-[11px] font-bold uppercase tracking-wider text-on-surface-variant/60">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">delivery_dining</span>
+<span>프렌치 • 파인 다이닝</span>
+</div>
+<div class="w-1 h-1 bg-outline-variant/30 rounded-full"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">restaurant</span>
+<span>프렌치 • 파인 다이닝</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Restaurant Card 2 -->
+<div class="bg-white rounded-lg overflow-hidden group border border-outline-variant/10 hover:shadow-xl transition-shadow duration-300">
+<div class="relative aspect-video">
+<img alt="burger and fries" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxqLvxbtbwBtHWQHHFTa9JlzdRjISjcqFIqDBEwEoNRo88IKzV2CT543SihHQ3QgLkKuk4cIw4cd33ShNs0CPFGsD7ORawzzTD8aUpcVck8lbHUeWTLA4cYa0nPJIt-XqaE7SJI1-WLi189fUx-ZQQt4krw-FODkKqy6R0gHGQiWlSwILtE81G1_hx6dhwSYUdS9veoD4Cs-qk6mqNWDJe70JHduZ3J5x6v3uLQ9ijowRYcYWyIDSlFmRwVTXH7nWsZtL0UL0hdZgq"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded-full flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary-fixed text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="font-headline font-bold text-xs">4.7</span>
+</div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="bg-secondary text-on-secondary text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">최고 평점</span>
+<span class="bg-on-surface/80 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full backdrop-blur">15-25분</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-headline text-xl font-bold">Patty &amp; Bun</h4>
+<span class="text-primary font-bold">$$</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4 leading-relaxed line-clamp-2">시그니처 트러플 마요네즈와 수제 천일염 감자튀김을 곁들인 스매시 스타일 드라이 에이징 비프 패티.</p>
+<div class="flex items-center gap-4 text-[11px] font-bold uppercase tracking-wider text-on-surface-variant/60">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">delivery_dining</span>
+<span>버거 • 아메리칸</span>
+</div>
+<div class="w-1 h-1 bg-outline-variant/30 rounded-full"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">restaurant</span>
+<span>버거 • 아메리칸</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Section (Bento Grid Style) -->
+<section class="pb-10">
+<h3 class="font-headline text-2xl font-extrabold tracking-tight mb-6">에디터 추천 컬렉션</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="col-span-2 row-span-2 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between relative overflow-hidden min-h-[300px] md:h-[400px]">
+<div class="z-10">
+<h4 class="font-headline text-2xl font-bold text-primary mb-2">비건의 즐거움</h4>
+<p class="text-on-surface-variant max-w-[200px]">최고급 비스트로의 엄선된 스테이크를 식탁에서 즐겨보세요.</p>
+</div>
+<button class="bg-primary text-on-primary w-12 h-12 rounded-full flex items-center justify-center z-10 self-end shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<img alt="vegan bowl" class="absolute -bottom-10 -right-10 w-64 h-64 object-cover rounded-full opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB__ViRrYlYHyozgLG6h6g1u65Ix-TniV8vdFzzrTSbQKIuH5hxhYWAY9gIXDcdWXHjFp_epQdZBJyQ6zKpOsfXypnZEG8zqkSGGtB6cITjVyLEAyugjbTODFiY5Bn7RRyR3xYIxBjeSq__2njiljFBKnPYwGf6wrQUFhsPueXbD_Yel9UlAI99DYxEE4S3Qgp0-72lD_RmK6swImhr5rWRlBEFrjTawfGMnRkC8FgAKQDHy_v4GLGYUwK2g0qyWtlxKvkYI4E9jzBV"/>
+</div>
+<div class="bg-surface-container-low rounded-xl p-6 relative overflow-hidden min-h-[140px]">
+<h4 class="font-headline font-bold relative z-10 text-on-surface">심야 야식</h4>
+<span class="material-symbols-outlined absolute -bottom-2 -right-2 text-primary-container opacity-20 text-6xl md:text-8xl">nights_stay</span>
+</div>
+<div class="bg-surface-container rounded-xl p-6 relative overflow-hidden min-h-[140px]">
+<h4 class="font-headline font-bold relative z-10 text-on-surface">장인 정신 커피</h4>
+<span class="material-symbols-outlined absolute -bottom-2 -right-2 text-primary-container opacity-20 text-6xl md:text-8xl">local_cafe</span>
+</div>
+<div class="col-span-2 bg-[#fff1f2] rounded-xl p-6 flex items-center justify-between min-h-[140px]">
+<div>
+<h4 class="font-headline text-xl font-bold mb-1">신규 입점</h4>
+<p class="text-sm opacity-70">이번 주 신규 맛집 12곳</p>
+</div>
+<div class="flex -space-x-4">
+<img alt="profile" class="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 md:border-4 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCQ_atT8hOpPHIc6hj4vZ4nGXZ1Noip9JJmEECOuebQtFgFpyHDyd-JhH9lzW233QxaxmKx2dB_A3yN9nhtAGTtWc51FoDbMO-_lu55_bw1AYbW35ShIF24p9CbkkOR96Fj6WvpMaHishDLFr_Hq8go72WuhmZn8LKumDZu3fBkjUguEQeJ3DIWPn3NKhETwFN7EL1iGcx_DCEdQt6u-xs9TpsZ07_XbYeRCP4pTwxKRLw3zxQw9-P112lU0aM_Ej6M7y9tu1p-3FW"/>
+<img alt="profile" class="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 md:border-4 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVpCwAspL5aWEhNiLDnlz1_1DdEzBrX3oVrlEJjwWk6H-ediOdmQGIlaBbj7UoRwGp071sK8jHiWjgnI9YQ1H3FxN5gEEzMhtZdqqBHG_bcUArQOHD3R8ENWJ781684kvcOUHj26as9MBaxgCv8hBBjdweDKM8FqYjGRv3U7Yew16c6_Wve7aNqjJPScbTieP3Yg4h4QHcRsrIJCmuv0bmez3nGfZ0FxvOk48Foln3t4QRjCChUT0kmur-xfEl9UASSWxDzNF6ayRK"/>
+<img alt="profile" class="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 md:border-4 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwvDACKpbr7edS8V0T8AjlBPW4aqDPYr6eqEh5C7l00h9H7XOXiTK3RxxfqSvVkaM0Spo6tlL4lob_LsFYs8Y7u6NihaNeBu326rpxV73_cjspIOPfaZa6U9AluoW75F7KGdtmozu27GKC_DbwBh6Dc_R3Se-K8-VRm9hW5efkIpR1kgUSEAFDb5i2jfsLOCrdPq6TeaN1eP5dvl-YM9hFml_neZNugsxnhEN7EOwsyCKDHTazHdeqSBeuKRJaEo9p_mwCZp-NwBCs"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 w-full z-50 bg-white/90 dark:bg-stone-950/90 backdrop-blur-2xl shadow-[0_-10px_40px_rgba(77,33,39,0.08)] rounded-t-[3rem] border-none">
+<div class="max-w-7xl mx-auto flex justify-around items-center px-5 pb-6 pt-3">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#af251e] to-[#ff7767] text-white rounded-full px-5 py-2 scale-110 transition-all shadow-lg shadow-primary/20" href="#">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>home</span>
+<span class="font-headline text-[11px] font-semibold tracking-wide">홈</span>
+</a>
+<!-- Search -->
+<a class="flex flex-col items-center justify-center text-[#4d2127] dark:text-[#ffeced] opacity-60 hover:opacity-100 transition-all" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-headline text-[11px] font-semibold tracking-wide">검색</span>
+</a>
+<!-- Orders -->
+<a class="flex flex-col items-center justify-center text-[#4d2127] dark:text-[#ffeced] opacity-60 hover:opacity-100 transition-all" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-headline text-[11px] font-semibold tracking-wide">주문</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-[#4d2127] dark:text-[#ffeced] opacity-60 hover:opacity-100 transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-headline text-[11px] font-semibold tracking-wide">프로필</span>
+</a>
+</div>
+</nav>
+</body></html>
